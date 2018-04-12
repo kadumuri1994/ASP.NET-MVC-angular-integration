@@ -1,0 +1,24 @@
+<button (click)="send()">send</button>
+<br/>
+
+<table *ngIf="isdataloading==false">
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Author
+    </th>
+    <th>
+      Price
+    </th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td>{{book.price}}</td>
+  </tr>
+</table>
+
+
+<img src="/angapp/dist/assets/images/gears.gif" style="width:100px" *ngIf="isdataloading==true"/>
